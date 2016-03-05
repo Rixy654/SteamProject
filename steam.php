@@ -17,6 +17,6 @@ foreach ($href as $link) {
   $name = $crawler->filterXpath('//h1[@id="largeiteminfo_item_name"]')->html();
   print '<li>' . $link . '<li>';
 }
-
+print_r $href;
 print 'This is a test';
 ?>
