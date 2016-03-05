@@ -11,7 +11,7 @@ $crawler = $client->request('GET', 'https://steamcommunity.com/market');
 $href = $crawler->filterXpath('//div[@id="popularItemsRows"]/a')->extract(array('href'));
 
 foreach ($href as $link) {
-  $crawler = $client->click($link);
+  //$crawler = $client->click($link);
   print '<li>' . $link . '<li>';
 }
 
