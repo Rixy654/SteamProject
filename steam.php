@@ -8,8 +8,8 @@ $client = new Client();
 
 
 $crawler = $client->request('GET', 'https://steamcommunity.com/market');
-//$href = $crawler->filterXpath('//div[@id="popularItemsRows"]/a')->extract(array('href'));
-$href = $crawler->selectLink('Counter-Strike: Global Offensive')->link();
+$href = $crawler->filterXpath('//div[@id="popularItemsRows"]/a')->link();
+//$href = $crawler->selectLink('Counter-Strike: Global Offensive')->link();
 foreach ($href as $link) {
   //$gohere = $link->link();
   $crawler = $client->click($link);
